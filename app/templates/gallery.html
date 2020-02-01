@@ -1,0 +1,6 @@
+heyho
+{{ path }}
+{{ pictures }}
+{% for pic in pictures %}
+<img src="{{ url_for('send_pictures', path=path + '/' + pic) }}" >
+{% endfor %}
