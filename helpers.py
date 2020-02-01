@@ -8,7 +8,7 @@ def get_pictures(path=None, pics=[]):
 
     pics=[]
     if path != '.' and path != '/':
-        files = [f for f in os.listdir(app.IMAGEBASEPATH + path) ]
+        files = [f for f in os.listdir(app.static_folder + '/images/' + path) ]
         for f in files:
             pics.append(f)
     return pics
