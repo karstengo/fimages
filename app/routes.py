@@ -13,6 +13,8 @@ def send_pictures(path):
 
 @app.route('/test')
 def atest():
+    pictures=get_pictures(path='testimages')
+    logging.debug('Test {} ... '.format(pictures))
     return render_template('test.html',
 	title='Home', 
 	)
