@@ -4,6 +4,7 @@ from flask import send_from_directory
 from helpers import get_pictures
 
 from app import app
+import logging
 
 
 @app.route('/pictures/<path:path>')
@@ -16,12 +17,13 @@ def atest():
 	title='Home', 
 	)
 
-@app.route('/', defaults={'path':''})
-@app.route('/<path:path>')
-def gallery(path):
+@app.route('/gallery/<path:imgpath>', defaults={'imgpath':''})
+def gallery(imgpath):
+
+    logging.debug('22222222{} ... '.format(imgpath))
+    pictures=get_pictures(path=imgpath)
     return render_template('gallery.html',
-	title='Home', 
-	path=path,
-	pictures=get_pictures(path=path),
+	path=imgpath,
+        pictures=pictures,
 	)
 
