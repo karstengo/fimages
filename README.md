@@ -9,3 +9,4 @@ curl http://localhost:5000/testimages
 lists content of images/foobar as well if you do that 10 times you have like 100 images on template displayed
 
 
+Happens without docker too. 
