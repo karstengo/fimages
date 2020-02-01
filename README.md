@@ -4,7 +4,7 @@ it lists everything of all folders and remembers the listing of everything until
 
 e.g.
 
-curl http://localhost:5000/testimages
+curl http://localhost:5000/gallery/testimages
 
 lists content of images/foobar as well if you do that x times you have like x* images on template displayed
 
