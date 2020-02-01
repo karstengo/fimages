@@ -17,13 +17,13 @@ def atest():
 	title='Home', 
 	)
 
-@app.route('/gallery/<path:imgpath>', defaults={'imgpath':''})
-def gallery(imgpath):
+@app.route('/gallery/<path:path>')
+def gallery(path):
 
-    logging.debug('22222222{} ... '.format(imgpath))
-    pictures=get_pictures(path=imgpath)
+    logging.debug('22222222{} ... '.format(path))
+    pictures=get_pictures(path=path)
     return render_template('gallery.html',
-	path=imgpath,
+	path=path,
         pictures=pictures,
 	)
 
