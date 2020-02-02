@@ -3,5 +3,5 @@ env
 *__pycache*
 debug.log
 app/static/images/*
-\!app/static/images/testimages
-\!app/static/images/foobar
+!app/static/images/testimages
+!app/static/images/foobar
