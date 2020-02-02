@@ -9,8 +9,10 @@ import logging
 
 @app.route('/pictures/<path:imgpath>')
 def send_pictures(imgpath):
-    logging.debug('Test {} ... '.format(app.static_folder + imgpath))
-    return send_from_directory(app.static_folder, 'images/testimages/test.jpg')
+    fullpath = 'images/' + imgpath
+    logging.debug('Test {} ... '.format(fullpath))
+    print(app.static_folder, fullpath)
+    return send_from_directory(app.static_folder, fullpath)
 
 @app.route('/test')
 def atest():
