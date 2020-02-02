@@ -9,10 +9,15 @@
 
 #image-gallery .modal-footer{
   display: block;
+  width: 400px!importan!importantt;
 }
 
 .thumb{
   margin-top: 15px;
   margin-bottom: 15px;
+}
+
+.fineimg {
+  width: 1000px!important;
 }
 </style>
